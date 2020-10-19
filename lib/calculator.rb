@@ -15,17 +15,18 @@ class Calculator
     return result = values.inject { |difference, num| difference - num }
   end
 
-  def multiply(a,b,c=nil)
+  def multiply(a,b,c = 1)
     values = []
     values << a
     values << b
-    #values << c
-    return result = values.inject { |product, num| product * num }
+    values << c
+    return result = values.inject(1) { |product, num| product * num }
   end
 
-  def divide(a,b,c = 0)
+  def divide(a,b,c = 1)
     values = []
     values << a
+
     if !b.zero? || !c.zero?
       values << b
       values << c
