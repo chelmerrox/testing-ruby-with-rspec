@@ -26,16 +26,18 @@ class Calculator
   def divide(a,b,c = 1)
     values = []
     values << a
+    values << b
+    values << c
 
-    if !b.zero? || !c.zero?
-      values << b
-      values << c
-    else
+    begin 
+      result = values.inject { |quotient, num| quotient/num } 
+    rescue ZeroDivisionError=>e
       #return 'Error! Can not divide by zero!'
-      raise ZeroDivisionError
+      puts "Error: #{e}"
+    else
+      return result
     end
-
-    return result = values.inject { |quotient, num| quotient/num } 
+     
   end
 
 end
