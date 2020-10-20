@@ -1,6 +1,6 @@
 #  Testing Ruby with RSpec
 
-> This is my test repo for testing Ruby with RSpec where I need to write RSpec tests for my Ruby projects. This is for me to practice the syntax of writing RSpec & to also practice thinking about test-cases/scenrarios that I need to pass for my Ruby projects.
+> This is my test repo for testing Ruby with RSpec where I need to write RSpec tests for my Calculator class that has instance method definitions for the four arithmetic operations: addition, subtraction, multiplication, and division. This is for me to practise the syntax of writing RSpec & to also practise thinking about different test-cases/scenarios that I need to pass for my Ruby projects.
 
 ## Built With
 
@@ -20,48 +20,19 @@ From your command line, do the folowing steps below:
 
 ```bash
 # Clone this repository
-$ git clone git@github.com:chelmerrox/my_ruby_tic_tac_toe.git
+$ git clone git@github.com:chelmerrox/testing-ruby-with-rspec.git
 
 ```
 
-2. Change directory/Go into the repository with the command below.
+2. Change directory/Go into the repository with the command below. This is the root folder.
 
 ```bash
-$ cd my_ruby_tic_tac_toe
+$ cd testing-ruby-with-rspec
 
 ```
 
-3. Change directory into the bin folder.
+3. Run `rspec` command in the terminal to run the tests in the `calculator_spec.rb` file.
 
-```bash
-$ cd bin
-
-```
-
-4. Run the `ls -l main.rb` command to check if the permission bits, `-rw-r--r--`, is the same as seen below.
-
-```bash
--rw-r--r-- 1 username staff 20 Sep 24 01:05 main.rb
-
-```
-
-5. Run `chmod 755 -R main.rb` to change the permission bits and to make the `main.rb` file executable.
-
-6. Run the `ls -l main.rb` command to check if the permission bits have changed to the one seen below.
-
-```bash
--rwxr-xr-x username staff 20 Sep 24 01:05 main.rb
-
-```
-
-7. Change directory back into the root folder.
-
-```bash
-cd ../
-
-```
-
-8. Run `bin/main.rb` to execute the file and for you to begin playing the game on the terminal.
 
 ## Author
 
@@ -84,6 +55,8 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
+- My Stand-Up team
+- [My mentor](https://github.com/BrittanyBlake)
 
 ## 📝 License
 
