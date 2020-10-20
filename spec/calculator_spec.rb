@@ -13,46 +13,51 @@ describe Calculator do
         expect(calculator.add(0, -2)).to eql(-2)
       end
 
-       # add this
-       it "returns the sum of more than two numbers" do
+      # add this
+      it "returns the sum of more than two numbers" do
         calculator = Calculator.new
         expect(calculator.add(1, 2, 3)).to eql(6)
-       end
+      end
 
-       it "returns the sum of more than two numbers" do
+      it "returns the sum of more than two numbers" do
         calculator = Calculator.new
         expect(calculator.add(-1, 2, 3)).to eql(4)
-       end
+      end
 
-       it "returns the sum of more than two numbers" do
+      it "returns the sum of more than two numbers" do
         calculator = Calculator.new
         expect(calculator.add(1, -2, 3)).to eql(2)
-       end
+      end
 
-       it "returns the sum of more than two numbers" do
+      it "returns the sum of more than two numbers" do
         calculator = Calculator.new
         expect(calculator.add(1, 2, -3)).to eql(0)
-       end
+      end
 
-       it "returns the sum of more than two numbers" do
+      it "returns the sum of more than two numbers" do
         calculator = Calculator.new
         expect(calculator.add(-1, -2, -3)).to eql(-6)
-       end
+      end
 
-       it "returns nil for TypeError" do
+      it "returns nil for TypeError" do
         calculator = Calculator.new
         expect(calculator.add(1, 'a')).to eql(nil)
-       end
+      end
 
-       it "returns nil for TypeError" do
+      it "returns nil for TypeError" do
         calculator = Calculator.new
         expect(calculator.add('a', 'a')).to eql(nil)
-       end
+      end
 
-       it "returns nil for TypeError" do
+      it "returns nil for TypeError" do
         calculator = Calculator.new
         expect(calculator.add(1, 'a', 'b')).to eql(nil)
-       end
+      end
+
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.add('c', 'a', 'b')).to eql(nil)
+      end
 
        # negative scenarios
       it "should not return zero" do
@@ -85,6 +90,11 @@ describe Calculator do
 
       it "returns the difference of more than two numbers" do
         calculator = Calculator.new
+        expect(calculator.subtract(1, 2, 3)).to eql(-4)
+      end
+
+      it "returns the difference of more than two numbers" do
+        calculator = Calculator.new
         expect(calculator.subtract(-1,-5, 6)).to eql(-2)
       end
 
@@ -95,12 +105,22 @@ describe Calculator do
 
       it "returns nil for TypeError" do
         calculator = Calculator.new
-        expect(calculator.subtract('a', 'a')).to eql(nil)
+        expect(calculator.subtract('a', 1)).to eql(nil)
+      end
+
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.subtract('a', 'b')).to eql(nil)
       end
 
       it "returns nil for TypeError" do
         calculator = Calculator.new
         expect(calculator.subtract(1, 'a', 'b')).to eql(nil)
+      end
+
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.subtract('c', 'a', 'b')).to eql(nil)
       end
 
       # negative scenarios
@@ -143,12 +163,33 @@ describe Calculator do
 
       it "returns nil for TypeError" do
         calculator = Calculator.new
-        expect(calculator.multiply('a', 'a')).to eql(nil)
+        expect(calculator.multiply('a', 1)).to eql(nil)
+      end
+
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.multiply('a', 'b')).to eql(nil)
       end
 
       it "returns nil for TypeError" do
         calculator = Calculator.new
         expect(calculator.multiply(1, 'a', 'b')).to eql(nil)
+      end
+
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.multiply('c', 'a', 'b')).to eql(nil)
+      end
+
+      # negative scenarios
+      it "should not return -2" do
+        calculator = Calculator.new
+        expect(calculator.multiply(-1,-2)).not_to eql(-2)
+      end
+
+      it "should not return 6" do
+        calculator = Calculator.new
+        expect(calculator.multiply(-1,-2,-3)).not_to eql(6)
       end
     end
 
@@ -184,6 +225,40 @@ describe Calculator do
         expect(calculator.divide(6,3,0)).to eql(nil)
       end
 
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.divide(1,'a')).to eql(nil)
+      end
+
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.divide('a',1)).to eql(nil)
+      end
+
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.divide('a','a')).to eql(nil)
+      end
+
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.divide(1,'a', 'b')).to eql(nil)
+      end
+
+      it "returns nil for TypeError" do
+        calculator = Calculator.new
+        expect(calculator.divide('c','a','b')).to eql(nil)
+      end
+
       # negative scenarios
+      it "should not return -2" do
+        calculator = Calculator.new
+        expect(calculator.subtract(6, 3)).not_to eql(-2)
+      end
+
+      it "should not return -1" do
+        calculator = Calculator.new
+        expect(calculator.divide(6,-2,-3)).not_to eql(-1)
+      end
     end
   end
