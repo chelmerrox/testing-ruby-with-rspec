@@ -6,7 +6,9 @@ class Calculator
     values << c
 
     begin
-     return result = values.inject { |sum, num| sum + num }
+     if a.is_a?(Integer) && b.is_a?(Integer) && b.is_a?(Integer)
+       return result = values.inject { |sum, num| sum + num }
+     end
     rescue TypeError
       puts 'Error. Cannot add different data types.'
       return nil
@@ -20,7 +22,9 @@ class Calculator
     values << c
 
     begin
-      return result = values.inject { |difference, num| difference - num }
+      if a.is_a?(Integer) && b.is_a?(Integer) && b.is_a?(Integer)
+        return result = values.inject { |difference, num| difference - num }
+      end
     rescue TypeError
       puts 'Error. Cannot subtract different data types.'
       return nil
@@ -34,7 +38,9 @@ class Calculator
     values << c
 
     begin
-      return result = values.inject(1) { |product, num| product * num }
+      if a.is_a?(Integer) && b.is_a?(Integer) && b.is_a?(Integer)
+        return result = values.inject(1) { |product, num| product * num }
+      end
     rescue TypeError
       puts 'Error. Cannot multiply different data types.'
       return nil
@@ -48,7 +54,9 @@ class Calculator
     values << c
 
     begin
-     return result = values.inject { |quotient, num| quotient/num } 
+      if a.is_a?(Integer) && b.is_a?(Integer) && b.is_a?(Integer)
+        return result = values.inject { |quotient, num| quotient/num } 
+      end
     rescue ZeroDivisionError
       puts 'Error. Cannot divide by zero.'
       return nil
