@@ -6,7 +6,7 @@ class Calculator
     values << c
 
     begin
-     if a.is_a?(Integer) && b.is_a?(Integer) && b.is_a?(Integer)
+     if a.is_a?(Integer) && b.is_a?(Integer) && c.is_a?(Integer)
        return result = values.inject { |sum, num| sum + num }
      end
     rescue TypeError
@@ -22,7 +22,7 @@ class Calculator
     values << c
 
     begin
-      if a.is_a?(Integer) && b.is_a?(Integer) && b.is_a?(Integer)
+      if a.is_a?(Integer) && b.is_a?(Integer) && c.is_a?(Integer)
         return result = values.inject { |difference, num| difference - num }
       end
     rescue TypeError
@@ -38,7 +38,7 @@ class Calculator
     values << c
 
     begin
-      if a.is_a?(Integer) && b.is_a?(Integer) && b.is_a?(Integer)
+      if a.is_a?(Integer) && b.is_a?(Integer) && c.is_a?(Integer)
         return result = values.inject(1) { |product, num| product * num }
       end
     rescue TypeError
@@ -54,7 +54,7 @@ class Calculator
     values << c
 
     begin
-      if a.is_a?(Integer) && b.is_a?(Integer) && b.is_a?(Integer)
+      if a.is_a?(Integer) && b.is_a?(Integer) && c.is_a?(Integer)
         return result = values.inject { |quotient, num| quotient/num } 
       end
     rescue ZeroDivisionError
